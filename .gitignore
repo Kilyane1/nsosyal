@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+build/
+dist/
+*.spec
+*.exe
+
+# Personal config — API key burada duruyor!
+config.json
+.env
+
+# Models and data
+models/
+data/
+output/
+test_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log

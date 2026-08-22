@@ -1,0 +1,30 @@
+# Çekirdek GUI + sesli komut + ekran yakalama + Gemini API
+tkinter                # GUI (Python ile gelir)
+Pillow>=10.0           # PIL - ekran goruntusu
+
+# Mikrofon + ses
+sounddevice>=0.4.6     # mikrofon erisimi
+keyboard>=0.13         # global klavye kisayolu
+pygame>=2.5            # sesli okuma (MP3 oynatma)
+edge-tts>=6.1          # Turkce TTS (ucretsiz, API key gerektirmez)
+mss>=9.0               # ekran yakalama
+
+# HTTP
+requests>=2.31         # Gemini API cagrisi
+
+# Wake word (kendi egitimimiz)
+librosa>=0.10          # MFCC ozellik cikarimi
+scipy>=1.11            # filtre (kanal simulasyonu)
+scikit-learn>=1.3      # LogisticRegression
+joblib>=1.3            # model serialize/deserialize
+numpy>=1.24
+
+# ─────────────────────────────────────────────────────────────
+# KULLANILMAYAN (artik Gemini sadece analiz yapiyor, bunlara gerek yok)
+# requirements.txt'te tutulmali ki IDE import onerisi kirilmasin
+# ama PyInstaller exclude-module ile EXE'den cikarildi:
+#   torch, torchvision        : BLIP icin idi, silindi
+#   transformers              : BLIP icin idi, silindi
+#   easyocr, cv2              : OCR icin idi, silindi
+#   faster_whisper            : yerel ASR icin idi, silindi
+#   streamlit                 : PWA icin idi, silindi
